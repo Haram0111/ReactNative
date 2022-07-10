@@ -1,12 +1,12 @@
 import React from 'react';
-import { StatusBar, TouchableOpacity } from 'react-native-web';
-import styled, {ThemeProvider} from 'styled-components/native';
-import { theme } from './theme';
-import Input from './components/input';
+import { StatusBar } from "expo-status-bar";
+import styled, { ThemeProvider } from 'styled-components/native';
+import { theme } from './src/theme';
+import Input from './src/components/input';
 
 const Container = styled.SafeAreaView`
   flex: 1;
-  background-color: ${({theme}) => theme.background};
+  background-color: ${({ theme }) => theme.background};
   align-items: center;
   justify-content: flex-start;
 `;
@@ -14,7 +14,7 @@ const Container = styled.SafeAreaView`
 const Title = styled.Text`
   font-size: 40px;
   font-weight: 600;
-  color: ${({theme}) => theme.main};
+  color: ${({ theme }) => theme.main};
   align-self: flex-start;
   margin: 0px 20px;
 `;
@@ -23,9 +23,7 @@ export default function App() {
   return (
     <ThemeProvider theme={theme}>
       <Container>
-        <StatusBar
-          barStyle="light-content"
-          backgroundColor={theme.background}/>
+        <StatusBar style="auto" />
         <Title>TODO List</Title>
         <Input />
       </Container>

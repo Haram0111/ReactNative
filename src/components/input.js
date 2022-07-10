@@ -1,22 +1,20 @@
 import React from 'react';
 import styled from 'styled-components/native';
-import { Dimensions } from 'react-native-web';
 
-const styledInput = styled.TextInput`
-  width: ${({width})=> width - 40}px;
+const StyledInput = styled.TextInput`
+  width: 100px;
   height: 60px;
   margin: 3px 0;
   padding: 15px 20px;
   border-radius: 10px;
-  background-color: ${({theme})=> theme.itemBackground};
+  background-color: ${({ theme }) => theme.itemBackground};
   font-size: 25px;
-  color: ${({theme})=> theme.text};
-`
+  color: ${({ theme }) => theme.text};
+`;
 
 const Input = () => {
-    const width = Dimensions.get('window').width;
 
-    return <styledInput width={width}/>;
+  return <StyledInput/>;
 };
 
 export default Input;
