@@ -24,7 +24,7 @@ export default function App() {
     <ThemeProvider theme={theme}>
       <Container>
         <StatusBar style="auto" />
-        <Title>TODO List</Title>
+        <Title>Whether Test</Title>
         <Input />
       </Container>
     </ThemeProvider>
