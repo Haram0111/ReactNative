@@ -8,6 +8,7 @@ export default function App() {
       <StatusBar style="light"/>
       <View>
         <Text>Seoul</Text>
+        <View></View>
       </View>
     </View>
   );
